@@ -1,5 +1,5 @@
-# Securing Guide
+# Destroy Page
 
-Guide to securing your accounts.
+Save Private Notes.
 
-https://securing.guide
+https://destroy.page
