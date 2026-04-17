@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        const path = location.pathname.slice(1);
+        const hash = location.hash.slice(1);
+
+        const validPath = /^[A-Za-z0-9]{6}$/.test(path);
+        const validHash = /^[A-Za-z0-9_-]{9,10}$/.test(hash);
+        if (validPath && validHash) {
+            location.replace(`/note#${path}.${hash}`);
+        } else {
+            location.replace("https://destroy.page");
+        }
+    </script>
+</head>
+</html>

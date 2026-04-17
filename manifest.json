@@ -1,0 +1,13 @@
+{
+    "short_name": "destroy.page",
+    "name": "Save Private Notes",
+    "icons": [
+        {
+            "src": "https://destroy.page/favicon.ico",
+            "sizes": "27x32",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone"
+}

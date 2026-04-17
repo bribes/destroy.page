@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="destroy.page">
+    <meta name="application-name" content="destroy.page">
+
+    <title>Destroy Page | destroy.page</title>
+    <meta name="title" content="Destroy Page | destroy.page">
+    <meta name="description"
+        content="Save private notes that get destroyed when viewed!">
+    <meta name="theme-color" content="#000000">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="/icons/2fa.png">
+    <meta property="og:title" content="Destroy Page | destroy.page">
+    <meta property="og:site_name" content="destroy.page">
+    <meta property="og:description"
+        content="Save private notes that get destroyed when viewed!">
+
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Destroy Page | destroy.page">
+    <meta property="twitter:description"
+        content="Save private notes that get destroyed when viewed!">
+    <meta property="twitter:image" content="/icons/2fa.png">
+
+    <link rel="preload" as="image" href="/icons/github.png">
+    <link rel="preload stylesheet" href="/css/style.css" as="style" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=block" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <link rel="prefetch" href="/js/note.js" as="script">
+
+    <script src="js/note.js" crossorigin="anonymous" type="module"></script>
+    <script>window.addEventListener("load",()=>document.body.classList.remove("preload"))</script>
+</head>
+<body class="preload">
+    <a rel="nofollow" href="https://github.com/bribes/destroy.page" target="_blank" title="GitHub Repository"
+        class="github"><img src="/icons/github.png" alt="GitHub Icon" title="GitHub"></a>
+  <div class="container">
+    <h1><a href="https://destroy.page">destroy.page</a><i id="path"></i></h1>
+    <h2></h2>
+    <h3>encrypted self-destructing notes in one click</h3>
+
+    <div id="loading">
+      <p>Checking note...</p>
+    </div>
+
+    <div id="confirm" class="hidden">
+        <div class="textarea-wrap">
+            <div id="noteContent" class="textarea" contenteditable="false"></div>
+            <a href="javascript:viewNote()" class="view" id="viewBtn">click to view page</a>
+        </div>
+
+        <p id="copy"><a href="javascript:copyNote()" id="clickToCopy">click to copy</a> / <a href="javascript:destroy()" id="destroyNow">click to destroy now</a></p>
+
+        <p class="light">this page will be destroyed forever when you view it</p>
+    </div>
+
+    <div id="destroyed" class="hidden">
+      <div class="textarea-wrap">
+            <div id="noteContent" class="textarea" contenteditable="false"></div>
+            <div class="placeholder">:(</div>
+        </div>
+
+        <p>this page and its contents have been destroyed</p>
+        <p class="light" id="destroyedAt">destroyed at: </p>
+    </div>
+
+    <div id="errorDisplay" class="hidden">
+      <h2>Note not found</h2>
+      <p id="errorReason">this note has already been viewed and destroyed, or never existed.</p>
+    </div>
+
+  </div>
+</body>
+</html>
